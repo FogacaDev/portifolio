@@ -18,6 +18,27 @@
     transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
 }
 
+	.profile-img {
+    width: 120px; /* Defina o tamanho do ícone*/
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Mantém o formato redondo */
+    overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
+    background-color: #ddd; /* Opcional: cor de fundo */
+}
+
+.profile-img img {
+    width: 100%; /* Faz a imagem cobrir toda a área */
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção da imagem e ajusta ao tamanho do container */
+    transform: scale(1.1); /* Aumenta a imagem em 10% para cobrir melhor a borda */
+}
+
+
+
+
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #3498db;
@@ -478,15 +499,17 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-img">
-                    <i class="fas fa-user"></i>
+                    <img src="fotaça.jpg"></i>
                 </div>
                 <h1>Renan Fogaça</h1>
                 <p class="tagline">Análise e Desenvolvimento de Sistemas, Tecnologia da informação & Técnico Químico</p>
                 <div class="header-info">
-                    <div class="info-item">
-                <i class="fas fa-birthday-cake"></i>
-                <span>24/01/1986 (38 anos)</span>
-             </div>
+
+                    <div class="info-item"> 
+    		<i class="fas fa-birthday-cake"></i>
+   		<span>24/01/1986 (<span id="idade"></span> anos)</span>
+		</div>
+
              <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <span>São Paulo, Brasil</span>
@@ -656,7 +679,7 @@
             <div class="experience-item">
                 <div class="experience-date">Abril 2007 - Fevereiro 2012</div>
                 <div class="experience-company">Companhia Brasileira de Alumínio (CBA)</div>
-                <div class="experience-position">Auxiliar de Produção</div>
+                <div class="experience-position">Operador de Produção</div>
                 <div class="experience-department">Departamento: Laminação de Chapas, Salas Fornos</div>
                 <p>Atuava na operação de máquinas e ponte rolante, entrada de dados e conciliação de inventários, contribuindo para o processo produtivo da empresa.</p>
             </div>
@@ -667,7 +690,7 @@
             <h2 class="section-title">Habilidades</h2>
             <div class="skills-container">
                 <div class="skills-category">
-                    <h3>Técnicas</h3>
+                    <h3>Hard Skills</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Análises Laboratoriais</span>
@@ -856,6 +879,37 @@
             <p>© 2025 Renan Fogaça. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+	<script>  // calculador de idade JS
+
+    document.addEventListener("DOMContentLoaded", function () {
+        function calcularIdade(dataNascimento) {
+            let hoje = new Date();
+            let nascimento = new Date(dataNascimento);
+            let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+            // Ajusta caso ainda não tenha feito aniversário este ano
+            let mesAtual = hoje.getMonth();
+            let diaAtual = hoje.getDate();
+            let mesNascimento = nascimento.getMonth();
+            let diaNascimento = nascimento.getDate();
+
+            if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+                idade--;
+            }
+
+            return idade;
+        }
+
+        // Verifica se o elemento existe antes de modificar o conteúdo
+        let idadeSpan = document.getElementById("idade");
+        if (idadeSpan) {
+            idadeSpan.textContent = calcularIdade("1986-01-24");
+        }
+    });
+</script>
+
+
 
 </body>
 </html>
