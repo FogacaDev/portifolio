@@ -1,41 +1,43 @@
 
 	/* Define as cores padrão de cada rede social */
 .fa-linkedin-in { color: #0A66C2; } /* Azul do LinkedIn */
-.fa-github { color: #181717; } /* Preto do GitHub */
+.fa-github { color: #424242; } /* Preto do GitHub */
 .fa-whatsapp { color: #25D366; } /* Verde do WhatsApp */
-.fa-facebook { color: #1877F2; } /* Azul do Facebook */
+.fa-facebook { color: #1877F2; } /* Azul do Facebook */  
 
 /* Adiciona um efeito de hover */
 .social-links a:hover {
-    transform: scale(1.1); /* Aumenta levemente o tamanho ao passar o mouse */
+    transform: scale(1.5); /* Aumenta levemente o tamanho ao passar o mouse */
+    transition: transform 0.3s ease, font-size 0.3s ease; /* Suaviza a transição do aumento */
 }
 
 	.profile-img {
-    width: 120px; /* Defina o tamanho do ícone*/
-    height: 120px;
+    width: 150px; /* Defina o tamanho do círculo*/
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%; /* Mantém o formato redondo */
     overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
     background-color: #ddd; /* Opcional: cor de fundo */
+    transform: scale(1.4); /* Aumenta o contêiner proporcionalmente */
 }
 
 .profile-img img {
-    width: 100%; /* Faz a imagem cobrir toda a área */
+    width: 100%; /* Faz a imagem cobrir toda a área do circulo */
     height: 100%;
     object-fit: cover; /* Mantém a proporção da imagem e ajusta ao tamanho do container */
-    transform: scale(1.1); /* Aumenta a imagem em 10% para cobrir melhor a borda */
+    
 }
 
 
 
 
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
+            --primary-color: #0d0428;
+            --secondary-color: #3f00fb;
             --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
+            --light-color: #7bb8f5;
             --dark-color: #2c3e50;
             --text-color: #333;
             --text-light: #7f8c8d;
@@ -51,7 +53,7 @@
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: #f5f5f5;
+            background-color: #11115fa1;
         }
         
         a {
