@@ -1,34 +1,30 @@
-	  
-      const carousel = new bootstrap.Carousel('#myCarousel') //chama o bootstrap carrocel
-      // calculador de idade JS
-    document.addEventListener("DOMContentLoaded", function () {
-        function calcularIdade(dataNascimento) {
-            let hoje = new Date();
-            let nascimento = new Date(dataNascimento);
-            let idade = hoje.getFullYear() - nascimento.getFullYear();
+document.addEventListener("DOMContentLoaded", function () {
+    // Inicializando o carrossel
+    const carousel = new bootstrap.Carousel('#meuCarrossel'); // Certifique-se de que o ID é '#myCarousel'
+    console.log('Carrossel carregado:', carousel);
 
-            // Ajusta caso ainda não tenha feito aniversário este ano
-            let mesAtual = hoje.getMonth();
-            let diaAtual = hoje.getDate();
-            let mesNascimento = nascimento.getMonth();
-            let diaNascimento = nascimento.getDate();
+    // Função de cálculo de idade
+    function calcularIdade(dataNascimento) {
+        let hoje = new Date();
+        let nascimento = new Date(dataNascimento);
+        let idade = hoje.getFullYear() - nascimento.getFullYear();
 
-            if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
-                idade--;
-            }
+        // Ajusta caso ainda não tenha feito aniversário este ano
+        let mesAtual = hoje.getMonth();
+        let diaAtual = hoje.getDate();
+        let mesNascimento = nascimento.getMonth();
+        let diaNascimento = nascimento.getDate();
 
-            return idade;
+        if (mesAtual < mesNascimento || (mesAtual === mesNascimento && diaAtual < diaNascimento)) {
+            idade--;
         }
 
-        // Verifica se o elemento existe antes de modificar o conteúdo
-        let idadeSpan = document.getElementById("idade");
-        if (idadeSpan) {
-            idadeSpan.textContent = calcularIdade("1986-01-24");
-        }
-    });
+        return idade;
+    }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const carrossel = document.querySelector('#meuCarrossel');
-        console.log('Carrossel carregado:', carrossel);
-      });
-      
+    // Verifica se o elemento existe antes de modificar o conteúdo
+    let idadeSpan = document.getElementById("idade");
+    if (idadeSpan) {
+        idadeSpan.textContent = calcularIdade("1986-01-24"); // Exemplo de data de nascimento
+    }
+});
