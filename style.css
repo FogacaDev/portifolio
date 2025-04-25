@@ -19,7 +19,6 @@
     justify-content: center;
     border-radius: 50%; /* Mantém o formato redondo */
     overflow: hidden; /* Garante que a imagem não ultrapasse a borda */
-    background-color: #ddd; /* Opcional: cor de fundo */
     transform: scale(1.4); /* Aumenta o contêiner proporcionalmente */
 }
 
@@ -35,25 +34,27 @@
 
         :root {
             --primary-color: #0d0428;
-            --secondary-color: #3f00fb;
+            --secondary-color: #2a00fbd8;
             --accent-color: #e74c3c;
-            --light-color: #7bb8f5;
+            --light-color: #cfdbe6;
             --dark-color: #2c3e50;
-            --text-color: #333;
-            --text-light: #7f8c8d;
+            --text-color: #26262c;
+            --text-light: #242a40;
+           
         }
         
-        * {
+        *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         
         body {
+            
             font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: #11115fa1;
+            background-color: #0101239a !important;
         }
         
         a {
@@ -70,12 +71,13 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            
         }
         
         /* Header */
         header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
+            color: rgb(147, 156, 168);
             padding: 80px 0 50px;
             position: relative;
         }
@@ -93,7 +95,7 @@
             border-radius: 50%;
             background-color: var(--light-color);
             margin-bottom: 20px;
-            border: 4px solid white;
+            border: 4px solid rgb(16, 1, 1);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -122,7 +124,7 @@
         }
         
         .info-item {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(18, 17, 23, 0.995);
             padding: 8px 15px;
             border-radius: 20px;
             display: flex;
@@ -147,17 +149,18 @@
             background-color: #25D366;
             transform: translateY(-2px);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            color: white;
+            color: rgb(255, 255, 255);
         }
         
         /* Main Content */
         main {
             padding: 60px 0;
+            
         }
         
         section {
             margin-bottom: 60px;
-            background-color: white;
+            background-color: rgb(222, 224, 236);
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -180,6 +183,7 @@
             width: 60px;
             height: 2px;
             background-color: var(--accent-color);
+            
         }
         
         /* About Section */
@@ -187,6 +191,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
+        
         }
         
         .about-text {
@@ -280,7 +285,7 @@
         
         .timeline-content {
             padding: 20px;
-            background-color: white;
+            background-color: rgba(230, 235, 239, 0.916);
             border-radius: 8px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         }
@@ -485,4 +490,93 @@
                 padding: 20px;
             }
         }
- 
+        /* =========================================
+   Estilos personalizados para o carrossel
+   ========================================= */
+
+/* Limita a altura das imagens do carrossel e mantém o corte proporcional */
+.carousel img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  /* Define o estilo dos cartões dentro do carrossel */
+  .carousel .card {
+    max-width: 400px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 20px;
+    background-color: #D3D3D3; /* cor do card */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  /* Efeito ao passar o mouse sobre o cartão */
+  .carousel .card:hover {
+    transform: translateY(-5px); /* Eleva levemente o card */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Aumenta a sombra */
+  }
+  
+  /* Padding interno do conteúdo do card */
+  .carousel .card-body {
+    padding: 30px 20px;
+  }
+  
+  /* Estilo do título dentro do card */
+  .carousel .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Usa cor principal definida no :root */
+  }
+  
+  /* Estilo do texto dentro do card */
+  .carousel .card-text {
+    font-size: 1rem;
+    color: var(--text-color); /* Usa cor de texto padrão do tema */
+  }
+  
+  /* Animações para ícones dentro do carrossel */
+  .carousel i {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Efeito ao passar o mouse sobre o ícone */
+  .carousel i:hover {
+    transform: scale(1.4); /* Aumenta o ícone */
+    color: var(--accent-color) !important; /* Aplica a cor de destaque */
+  }
+  /* ===============================
+   Estilo dos botões do carrossel
+   =============================== */
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px; /* Define a largura do botão */
+  height: 50px; /* Define a altura do botão */
+  top: 50%; /* Posiciona os botões no centro vertical */
+  
+  background-color: rgba(49, 49, 112, 0.6); /* Fundo escuro translúcido para um efeito visual suave */
+  border-radius: 50%; /* Faz o botão ficar com formato circular */
+  opacity: 1; /* Garante que o botão esteja completamente visível */
+  z-index: 10; /* Define a camada de sobreposição, garantindo que o botão fique acima de outros elementos */
+  transition: background-color 0.3s ease; /* Aplica uma transição suave na mudança da cor de fundo */
+}
+
+/* Efeito hover nos botões */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: rgba(100, 95, 171, 0.9); /* Escurece o botão ao passar o mouse */
+}
+
+/* Estilo dos ícones dentro dos botões */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 60% 60%; /* Reduz o tamanho do ícone para caber melhor dentro do botão */
+  filter: invert(1); /* Inverte as cores do ícone, deixando-o branco para maior contraste */
+}
+
+/* Ajusta a posição do carrossel, se necessário */
+#meuCarrossel {
+  position: relative; /* Garante que o carrossel tenha posicionamento relativo para controlar melhor o layout */
+}

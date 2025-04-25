@@ -1,5 +1,6 @@
-	  // calculador de idade JS
-
+	  
+      const carousel = new bootstrap.Carousel('#myCarousel') //chama o bootstrap carrocel
+      // calculador de idade JS
     document.addEventListener("DOMContentLoaded", function () {
         function calcularIdade(dataNascimento) {
             let hoje = new Date();
@@ -26,4 +27,8 @@
         }
     });
 
-
+    document.addEventListener('DOMContentLoaded', function () {
+        const carrossel = document.querySelector('#meuCarrossel');
+        console.log('Carrossel carregado:', carrossel);
+      });
+      
