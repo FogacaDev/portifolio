@@ -580,3 +580,59 @@
 #meuCarrossel {
   position: relative; /* Garante que o carrossel tenha posicionamento relativo para controlar melhor o layout */
 }
+
+.english-progress-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+  }
+
+  .english-wheel {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: conic-gradient(#60a5fa 0%, #e5e7eb 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .english-inner {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .percentage {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    font-weight: bold;
+  }
+
+  .english-description {
+    flex: 1;
+    color: #1f2937;
+  }
+
+  .english-description h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: #0f172a;
+  }
+
+  .english-description p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }

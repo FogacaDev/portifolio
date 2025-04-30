@@ -28,3 +28,37 @@ document.addEventListener("DOMContentLoaded", function () {
         idadeSpan.textContent = calcularIdade("1986-01-24"); // Exemplo de data de nascimento
     }
 });
+
+//função da roda de progresso em idiomas
+function animateWheel(wheel) {
+    const percentageText = wheel.querySelector('.percentage');
+    const target = parseInt(wheel.getAttribute('data-progress'));
+    let current = 0;
+    const speed = 15;
+
+    const interval = setInterval(() => {
+      if (current >= target) {
+        clearInterval(interval);
+      } else {
+        current++;
+        const gradient = `conic-gradient(#60a5fa ${current}%, #e5e7eb ${current}%)`;
+        wheel.style.background = gradient;
+        percentageText.textContent = current + "%";
+      }
+    }, speed);
+  }
+
+  const wheel = document.querySelector('.english-wheel');
+
+  const observer = new IntersectionObserver(entries => { //animação só roda quando aparece na tela
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateWheel(entry.target);
+        observer.unobserve(entry.target); // roda apenas uma vez
+      }
+    });
+  }, {
+    threshold: 0.6 // anima quando 60% da roda estiver visível
+  });
+
+  observer.observe(wheel);
