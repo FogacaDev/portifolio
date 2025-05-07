@@ -3,17 +3,17 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M528RHGTSX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M528RHGTSX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-M528RHGTSX');
-</script>
+        gtag('config', 'G-M528RHGTSX');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!-- chamando o arquivo CSS -->
+    <link id="theme-style" rel="stylesheet" href="style-dark.css"> <!-- chamando o arquivo CSS -->
     <title>Renan Fogaça | Tecnólogo em Análise e Desenvolvimento de Sistemas, Bacharelado em Tecnologia da informação &
         Técnico Químico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -22,6 +22,10 @@
 </head>
 
 <body>
+    <button id="toggle-theme" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i> <!-- tema claro escuro -->
+    </button>
+
     <!-- Header Section -->
     <header>
         <div class="container">
@@ -65,14 +69,19 @@
             <div class="about-content">
                 <div class="about-text">
                     <p>Sou um profissional multidisciplinar com formação técnica em Química, Tecnólogo graduado em
-                        Análise e Desenvolvimento de sistemas e bacharelando em Tecnologia da Informação. Minha
-                        trajetória profissional inclui experiências valiosas em controle de qualidade, análises
-                        laboratoriais e operações industriais.</p>
-                    <p>Estou em busca de um novo desafio profissional para desempenhar minhas habilidades agregando o
-                        desenvolvimento mútuo. Busco construir e contribuir com minha carreira em empresas renomadas com
-                        base em todas as minhas experiências prévias, buscando novos conhecimentos profissionais,
-                        visando resoluções sustentáveis ao desenvolvimento humano e tecnológico com ousadia, humildade,
-                        ética e profissionalismo.</p>
+                        Análise e Desenvolvimento de Sistemas e atualmente bacharelando em Tecnologia da Informação.
+                        Minha trajetória profissional inclui experiências valiosas em controle de qualidade, análises
+                        laboratoriais e operações industriais, somadas a uma constante busca por evolução na área de
+                        tecnologia.</p>
+                    <p>Sou movido pela paixão por inovação e pelo desafio de aprender algo novo a cada dia. Busco
+                        ambientes que valorizem o crescimento mútuo, onde posso aplicar minhas habilidades de forma
+                        estratégica, aliando conhecimento técnico à inteligência emocional. Tenho facilidade em me
+                        conectar com pessoas e trabalhar em equipe, compreendendo que a colaboração é essencial para
+                        transformar ideias em resultados reais.</p>
+                    <p>Acredito no poder da união entre talentos, experiências e diferentes visões para superar
+                        desafios, alcançar objetivos comuns e gerar soluções sustentáveis. Minha jornada é guiada pela
+                        ousadia, humildade, ética e profissionalismo — pilares que me impulsionam a contribuir
+                        ativamente para o desenvolvimento humano e tecnológico.</p>
                 </div>
                 <div class="features">
                     <div class="feature-item">
@@ -234,9 +243,9 @@
                     <h3>Hard Skills</h3>
 
                     <!-- Carrossel -->
-                    <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                        <!-- giro automatico do carrossel -->
                         <div class="carousel-inner">
-
                             <div class="carousel-item active">
                                 <div class="card text-center">
                                     <div class="card-body">
@@ -294,44 +303,48 @@
 
                             <div class="carousel-item">
                                 <div class="card text-center">
-                                  <div class="card-body">
-                                    <i class="fab fa-git-alt fa-3x mb-3 text-danger"></i>
-                                    <h5 class="card-title">Git</h5>
-                                    <p class="card-text">Versionamento de código com ramificações e controle de mudanças eficiente.</p>
-                                  </div>
+                                    <div class="card-body">
+                                        <i class="fab fa-git-alt fa-3x mb-3 text-danger"></i>
+                                        <h5 class="card-title">Git</h5>
+                                        <p class="card-text">Versionamento de código com ramificações e controle de
+                                            mudanças eficiente.</p>
+                                    </div>
                                 </div>
-                              </div>
-                              
-                              <div class="carousel-item">
+                            </div>
+
+                            <div class="carousel-item">
                                 <div class="card text-center">
-                                  <div class="card-body">
-                                    <i class="fab fa-css3-alt fa-3x mb-3" style="color: #1572B6;"></i>
-                                    <h5 class="card-title">CSS3</h5>
-                                    <p class="card-text">Estilização moderna de interfaces com animações, responsividade e personalização visual.</p>
-                                  </div>
+                                    <div class="card-body">
+                                        <i class="fab fa-css3-alt fa-3x mb-3" style="color: #1572B6;"></i>
+                                        <h5 class="card-title">CSS3</h5>
+                                        <p class="card-text">Estilização moderna de interfaces com animações,
+                                            responsividade e personalização visual.</p>
+                                    </div>
                                 </div>
-                              </div>
-                              
-                              <div class="carousel-item">
+                            </div>
+
+                            <div class="carousel-item">
                                 <div class="card text-center">
-                                  <div class="card-body">
-                                    <i class="fab fa-js-square fa-3x mb-3 text-warning"></i>
-                                    <h5 class="card-title">JavaScript</h5>
-                                    <p class="card-text">Interatividade e lógica dinâmica para aplicações web modernas e responsivas.</p>
-                                  </div>
+                                    <div class="card-body">
+                                        <i class="fab fa-js-square fa-3x mb-3 text-warning"></i>
+                                        <h5 class="card-title">JavaScript</h5>
+                                        <p class="card-text">Interatividade e lógica dinâmica para aplicações web
+                                            modernas e responsivas.</p>
+                                    </div>
                                 </div>
-                              </div>
-                              
-                              <div class="carousel-item">
+                            </div>
+
+                            <div class="carousel-item">
                                 <div class="card text-center">
-                                  <div class="card-body">
-                                    <i class="fab fa-github fa-3x mb-3 text-dark"></i>
-                                    <h5 class="card-title">GitHub</h5>
-                                    <p class="card-text">Hospedagem e colaboração em projetos, usando pull requests, issues e Git Actions.</p>
-                                  </div>
+                                    <div class="card-body">
+                                        <i class="fab fa-github fa-3x mb-3 text-dark"></i>
+                                        <h5 class="card-title">GitHub</h5>
+                                        <p class="card-text">Hospedagem e colaboração em projetos, usando pull requests,
+                                            issues e Git Actions.</p>
+                                    </div>
                                 </div>
-                              </div>
-                               
+                            </div>
+
 
                         </div>
 
@@ -352,68 +365,69 @@
                         <h3>Idiomas</h3>
                         <div class="english-progress-container">
                             <div class="english-wheel" data-progress="60">
-                              <div class="english-inner">
-                                <div class="percentage">0%</div>
-                              </div>
+                                <div class="english-inner">
+                                    <div class="percentage">0%</div>
+                                </div>
                             </div>
                             <div class="english-description">
-                              <h3>Inglês - Nível Básico a Intermediário</h3>
-                              <p>
-                                Consigo ler e entender textos e conversas com boa compreensão. 
-                                Estou desenvolvendo a criação de frases, com foco na melhoria da escrita, uso correto de regras gramaticais e comandos nativos.
-                              </p>
+                                <h3>Inglês - Nível Básico a Intermediário</h3>
+                                <p>
+                                    Consigo ler e entender textos e conversas com boa compreensão.
+                                    Estou desenvolvendo a criação de frases, com foco na melhoria da escrita, uso
+                                    correto de regras gramaticais e comandos nativos.
+                                </p>
                             </div>
-                          </div>
+                        </div>
 
-                    <div class="skills-category">
-                        <h3>Soft Skills</h3>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Trabalho em Equipe</span>
-                                <span>95%</span>
+                        <div class="skills-category">
+                            <h3>Soft Skills</h3>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Trabalho em Equipe</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Comunicação</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Comunicação</span>
-                                <span>85%</span>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Resolução de Problemas</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Proatividade</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Resolução de Problemas</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Proatividade</span>
-                                <span>95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">
-                                <span>Adaptabilidade</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Adaptabilidade</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
         </section>
 
         <!-- Contact Section -->
@@ -479,6 +493,7 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="theme.toggle.js"></script>
 </body>
 
 </html>

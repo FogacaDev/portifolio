@@ -62,3 +62,9 @@ function animateWheel(wheel) {
   });
 
   observer.observe(wheel);
+
+  // função tema claro
+  if (savedTheme.includes('light')) {
+    icon.classList.replace('fa-moon', 'fa-sun');
+  }
+  const newTheme = currentTheme.includes('dark') ? 'style-light.css' : 'style-dark.css';
