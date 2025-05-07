@@ -22,5 +22,6 @@ Este é o repositório do meu portfólio pessoal, desenvolvido para exibir meus 
 ## Como Rodar
 ### Pré-requisitos
 1. Um **navegador** para visualizar o portfólio.
+2. execute o link https://fogacadev.github.io/portifolio/
 
 
