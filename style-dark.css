@@ -30,7 +30,7 @@
   html, body {
     height: 100%; /* Garante que o fundo cubra toda a altura da página */
     margin: 0; /* Remove a margem padrão */
-    background-color: #444444; /* Cor de fundo para toda a página */
+    background-color: #444444 !important; /* Cor de fundo para toda a página */
   }
   
   
